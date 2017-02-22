@@ -5,10 +5,10 @@ fi
 
 info "Installing OpenJDK 7"
 apt-get update
-apt-get install python-software-properties
+apt-get install -y python-software-properties
 add-apt-repository ppa:openjdk-r/ppa  
 apt-get update   
-apt-get install openjdk-7-jre  
+apt-get install -y openjdk-7-jre  
 
 info "Installing Sphinx and other packages."
 pip install Sphinx $WERCKER_SPHINX_PACKAGES
