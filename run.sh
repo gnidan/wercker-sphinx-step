@@ -4,7 +4,7 @@ if [ -n "$WERCKER_SPHINX_BASEDIR" ]; then
 fi
 
 info "Installing OpenJDK 7"
-apt-get install openjdk-7-jre 
+apt-get install openjdk-8-jdk 
 
 info "Installing Sphinx and other packages."
 pip install Sphinx $WERCKER_SPHINX_PACKAGES
