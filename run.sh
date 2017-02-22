@@ -4,6 +4,8 @@ if [ -n "$WERCKER_SPHINX_BASEDIR" ]; then
 fi
 
 info "Installing OpenJDK 7"
+apt-get update
+apt-get install python-software-properties
 add-apt-repository ppa:openjdk-r/ppa  
 apt-get update   
 apt-get install openjdk-7-jre  
