@@ -3,6 +3,9 @@ if [ -n "$WERCKER_SPHINX_BASEDIR" ]; then
   WERCKER_SPHINX_OPTIONS=$WERCKER_SPHINX_OPTIONS" --directory "${WERCKER_SPHINX_BASEDIR}
 fi
 
+info "Installing OpenJDK 6"
+apt-get install openjdk-6-jre-headless
+
 info "Installing Sphinx and other packages."
 pip install Sphinx $WERCKER_SPHINX_PACKAGES
 
