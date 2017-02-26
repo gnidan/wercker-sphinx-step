@@ -3,11 +3,6 @@ if [ -n "$WERCKER_SPHINX_BASEDIR" ]; then
   WERCKER_SPHINX_OPTIONS=$WERCKER_SPHINX_OPTIONS" --directory "${WERCKER_SPHINX_BASEDIR}
 fi
 
-info "Installing JRE"
-apt-get update   
-apt-get install -y default-jre  
-
-info "Installing Sphinx and other packages."
 pip install Sphinx $WERCKER_SPHINX_PACKAGES
 
 if [ -e "requirements.txt" ]; then
